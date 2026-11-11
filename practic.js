@@ -2,6 +2,19 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method, req.headers);
+  if(req.url === '/home'){
+    res.write(`<h1>welcome to home </h1>`);
+    return res.end();
+  } else if (req.url === '/men'){
+    res.write(`<h1>welcome to men </h1>`);
+    return res.end(); 
+  } else if (req.url === '/women'){
+    res.write(`<h1>welcome to women </h1>`);
+    return res.end(); 
+  } else if (req.url === '/kid'){
+    res.write(`<h1>welcome to kid </h1>`);
+    return res.end(); 
+  }
   res.write(`
     <html lang="en">
     <head>
