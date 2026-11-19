@@ -32,7 +32,7 @@ const requestHandler = (req, res) => {
       `);
       return res.end();
 
-  } else if (req.url.toLowerCase() === "/calculate-result" && req.method === 'POST') {
+  } else if (req.url.toLowerCase() === "/calculator-result" && req.method === 'POST') {
     return sumRequestHandler(req, res);
   }
    res.setHeader('Content-Type', 'text/html');
